@@ -1,0 +1,64 @@
+###############################################
+# Terraform + AWS Gitignore
+###############################################
+
+# --- Terraform working directory ---
+**/.terraform/*
+.terraform/
+
+# --- State files ---
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# --- Crash logs ---
+crash.log
+crash.*.log
+
+# --- Local variables (may contain secrets) ---
+*.tfvars
+*.tfvars.json
+
+# --- Local override files ---
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- Plan output (sensitive info) ---
+*.plan
+plan.out
+
+# --- Terraform CLI config files ---
+.terraformrc
+terraform.rc
+
+# --- Lock file (keep this if you want consistent provider versions) ---
+# Comment out the next line if you want to version lock provider versions
+#.terraform.lock.hcl
+
+# --- AWS Credentials ---
+# (Never commit your AWS access or session files)
+.aws/
+**/aws_credentials
+**/aws_config
+credentials
+config
+
+# --- System / Editor files ---
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+###############################################
+# Optional: local helper scripts or temp dirs
+###############################################
+scripts/tmp/
+notes/
+.env
+.env.*
